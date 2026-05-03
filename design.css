@@ -5,13 +5,11 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body {
-    background: #fff;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+/* HEADER BACKGROUND */
+.header {
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat center/cover;
+    position: relative;
 }
 
 /* NAVBAR */
@@ -22,181 +20,50 @@ a {
     padding: 20px 8%;
 }
 
-.logo img {
-    width: 120px;
+.logo {
+    width: 100px;
 }
 
 .menu {
     display: flex;
-    gap: 25px;
-}
-
-.menu li {
+    gap: 30px;
     list-style: none;
-    font-weight: 700;
-    cursor: pointer;
-    position: relative;
 }
 
-.menu li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-}
-
-.menu li:hover::after {
-    width: 100%;
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
 
 .login-btn {
     background: #f3ef51;
-    padding: 8px 25px;
-    border-radius: 25px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-/* BANNER */
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 8%;
-    flex-wrap: wrap;
-}
-
-.app-text {
-    flex: 1;
-    min-width: 280px;
-}
-
-.app-text h3 {
-    font-size: 16px;
-    letter-spacing: 2px;
-}
-
-.app-text h1 {
-    font-size: 48px;
-    margin: 20px 0;
-}
-
-.app-text p {
-    margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.btn-group {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.signup-btn {
-    background: #ffa037;
-    padding: 12px 30px;
-    border-radius: 30px;
+    padding: 8px 20px;
+    border-radius: 20px;
     font-weight: bold;
-    cursor: pointer;
 }
 
-.play-btn {
+/* HERO TEXT */
+.hero {
     display: flex;
     align-items: center;
-    gap: 10px;
+    height: 80vh;
+    padding: 0 8%;
 }
 
-.play-btn-inner {
-    width: 45px;
-    height: 45px;
-    background: #000;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+.text h1 {
+    font-size: 50px;
 }
 
-/* IMAGE */
-.app-picture {
-    flex: 1;
-    text-align: center;
-    min-width: 280px;
+.text p {
+    margin-top: 10px;
 }
 
-.app-picture img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* SERVICES */
-.about-services {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 60px 8%;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.service {
-    max-width: 250px;
-}
-
-.service img {
-    width: 100px;
-}
-
-.service h2 {
-    margin: 15px 0;
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-    position: fixed;
-    right: 20px;
-    top: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-.social-icons a {
-    font-size: 22px;
-    padding: 10px;
-    color: #000;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    background: #220efb;
-    color: #fff;
-}
-
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-/* Tablet */
-@media (max-width: 992px) {
-    .app-text h1 {
-        font-size: 36px;
-    }
-
-    .menu {
-        gap: 15px;
-    }
-}
-
-/* Mobile */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .menu {
@@ -204,16 +71,12 @@ a {
         justify-content: center;
     }
 
-    .banner {
-        flex-direction: column;
+    .hero {
         text-align: center;
-    }
-
-    .btn-group {
         justify-content: center;
     }
 
-    .social-icons {
-        display: none;
+    .text h1 {
+        font-size: 32px;
     }
 }
